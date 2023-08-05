@@ -22,8 +22,9 @@ public class Car {
         remote.setListener(this); // this is the only case where you need method injection (where you pass the injected object itself into the dependency) => because the object is not created)
         // you cant run this inside of the constructor because it needs an instance of it self, hmmmm got it
     }
-    
+
     public void drive() {
+        engine.start();
         Log.d(TAG, "driving ...");
     }
 }
