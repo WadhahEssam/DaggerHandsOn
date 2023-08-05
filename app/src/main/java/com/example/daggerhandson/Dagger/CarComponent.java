@@ -8,5 +8,5 @@ import dagger.Component;
 @Component
 public interface CarComponent {
    Car getCar();
-   void inject(MainActivity activity); // for the field injection
+   void inject(MainActivity activity); // for the field injection, Note: You can not just add Activity instead of MainActivity
 }
