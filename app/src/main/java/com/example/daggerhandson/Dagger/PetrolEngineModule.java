@@ -1,4 +1,7 @@
-package com.example.daggerhandson.Car;
+package com.example.daggerhandson.Dagger;
+
+import com.example.daggerhandson.Car.Engine;
+import com.example.daggerhandson.Car.PetrolEngine;
 
 import dagger.Binds;
 import dagger.Module;
@@ -10,5 +13,5 @@ public abstract  class PetrolEngineModule {
     // you use this when you want to bind an implementation to an interface. you should use this way, since its much more performant
     // you are just telling dagger to use Petrol engine for constructing an object that implements the Engine interface.
     // of course you have to provide a way for dagger to create the petrol engine too either by @inject or by adding it in the module here.
-     abstract  Engine bindEngine(PetrolEngine engine);
+     abstract Engine bindEngine(PetrolEngine engine);
 }

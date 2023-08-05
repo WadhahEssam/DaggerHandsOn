@@ -1,7 +1,6 @@
 package com.example.daggerhandson.Dagger;
 
 import com.example.daggerhandson.Car.Car;
-import com.example.daggerhandson.Car.PetrolEngineModule;
 import com.example.daggerhandson.MainActivity;
 
 import dagger.Component;
