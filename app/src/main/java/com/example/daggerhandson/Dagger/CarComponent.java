@@ -5,7 +5,7 @@ import com.example.daggerhandson.MainActivity;
 
 import dagger.Component;
 
-@Component
+@Component (modules = {CarModule.class})
 public interface CarComponent {
    Car getCar();
    void inject(MainActivity activity); // for the field injection, Note: You can not just add Activity instead of MainActivity
