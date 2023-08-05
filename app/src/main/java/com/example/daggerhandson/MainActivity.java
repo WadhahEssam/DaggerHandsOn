@@ -13,7 +13,8 @@ import javax.inject.Inject;
 
 public class MainActivity extends AppCompatActivity {
     @Inject
-    Car car;
+    Car car1, car2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +23,9 @@ public class MainActivity extends AppCompatActivity {
 
 //        CarComponent carComponent = DaggerCarComponent.builder().dieselEngineModule(new DieselEngineModule(100)).build();
         CarComponent carComponent = DaggerCarComponent.builder().horsePower(120).engineCapacity(2000).build(); // this is how to pass the instance in a very elegant way
-
         carComponent.inject(this);
-        car.drive();
+
+        car1.drive();
+        car2.drive();
     }
 }

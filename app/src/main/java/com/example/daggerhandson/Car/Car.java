@@ -9,11 +9,13 @@ public class Car {
 
     private Engine engine; // also you can mark those as @Inject, and they will be instanciated after constructor, constructor -> fields -> methods
     private Wheels wheels;
+    private Driver driver;
 
     @Inject
-    public Car(Engine engine, Wheels wheels) {
+    public Car(Engine engine, Wheels wheels, Driver driver) {
         this.engine = engine;
         this.wheels = wheels;
+        this.driver = driver;
     }
 
     // dagger will run this automatically after the car is created
@@ -25,7 +27,7 @@ public class Car {
 
     public void drive() {
         engine.start();
-        Log.d(TAG, "driving ...");
+        Log.d(TAG, "driving ..., the driver " + driver + " car instance " + this);
     }
 }
 

@@ -4,11 +4,14 @@ import com.example.daggerhandson.Car.Car;
 import com.example.daggerhandson.MainActivity;
 
 import javax.inject.Named;
+import javax.inject.Singleton;
 
 import dagger.BindsInstance;
 import dagger.Component;
 import kotlin.BuilderInference;
 
+@Singleton // you have always to make the dragger component as singleton if any of the injection below has a singleton, but the singleton only works with one component, so if you are creating a
+// another component, it will actually not care for the singleton annotation that you just created.
 @Component (modules = {CarModule.class, PetrolEngineModule.class})
 public interface CarComponent {
    Car getCar();
