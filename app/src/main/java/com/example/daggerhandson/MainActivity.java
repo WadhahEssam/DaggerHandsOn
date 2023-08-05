@@ -20,7 +20,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        CarComponent carComponent = DaggerCarComponent.builder().dieselEngineModule(new DieselEngineModule(100)).build();
+//        CarComponent carComponent = DaggerCarComponent.builder().dieselEngineModule(new DieselEngineModule(100)).build();
+        CarComponent carComponent = DaggerCarComponent.builder().horsePower(120).engineCapacity(2000).build(); // this is how to pass the instance in a very elegant way
+
         carComponent.inject(this);
         car.drive();
     }

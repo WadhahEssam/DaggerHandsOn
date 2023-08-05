@@ -5,7 +5,6 @@ import com.example.daggerhandson.Car.PetrolEngine;
 
 import dagger.Binds;
 import dagger.Module;
-import dagger.Provides;
 
 @Module
 public abstract  class PetrolEngineModule {
