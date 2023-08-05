@@ -23,7 +23,12 @@ public class DieselEngineModule {
     //    abstract Engine bindsDieselEngine(DieselEngine dieselEngine);
 
     @Provides
-    Engine providesEngine() { // you can't make this static because it needs the horsePower
-        return new DieselEngine(this.horsePower);
+    int provideHorsePower() { // this is telling digger, whenever an integer is needed, you can use this, (not whenever there is a horsePower is needed)
+        return horsePower;
+    }
+
+    @Provides
+    Engine providesEngine(DieselEngine dieselEngine) { // you can't make this static because it needs the horsePower
+        return dieselEngine;
     }
 }

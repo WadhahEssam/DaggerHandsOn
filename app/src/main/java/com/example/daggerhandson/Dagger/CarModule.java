@@ -8,7 +8,7 @@ import dagger.Module;
 import dagger.Provides;
 
 @Module
-public class CarModule {
+public abstract class CarModule { // if all of your module providers are static, you should make the module class abstract (to remove the deprecated message).
 
     // This is just to tell dagger how to instanciate objects for unaccessable constructors like rims (we pretended like its unaccessable)
     @Provides

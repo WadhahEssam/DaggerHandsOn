@@ -8,6 +8,7 @@ public class DieselEngine implements Engine {
     private static final String TAG = "Car";
     private int horsePower; // we want this field to be populated at run time (when we inject the Car in MainActivity)
 
+    @Inject
     public DieselEngine(int horsePower) {
         this.horsePower = horsePower;
     }
